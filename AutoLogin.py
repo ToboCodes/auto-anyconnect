@@ -1,15 +1,20 @@
 import pyautogui
 import time
 
-# VPN icon at Point(x=38, y=223)
+cli = pyautogui.getActiveWindow()
+cli.minimize()
+# Open VPN from icon
 pyautogui.moveTo(38, 223, duration=0.25)
 pyautogui.doubleClick()
 # Input user and password
-time.sleep(4)
+while not pyautogui.pixelMatchesColor(1405, 760, (0, 103, 184)):
+    time.sleep(0.3)
 pyautogui.write('ccontrerasc@entel.cl\n')
-time.sleep(2)
+while not pyautogui.pixelMatchesColor(1363, 812, (0, 103, 184)):
+    time.sleep(0.3)
 pyautogui.write('Gponinstalador@147\n')
-time.sleep(1.5)
+while not pyautogui.pixelMatchesColor(1285, 807, (253, 253, 253)):
+    time.sleep(0.3)
 # VPN "Accept" button at Point(x=1301, y=801)
 pyautogui.moveTo(1301, 801, duration=0.25)
 pyautogui.click()
@@ -20,21 +25,20 @@ pyautogui.doubleClick()
 pyautogui.moveTo(187, 224, duration=0.25)
 pyautogui.doubleClick()
 # Soft-phone "Open" button at Point(x=1638, y=243)
-time.sleep(2.2)
+while not pyautogui.pixelMatchesColor(1659, 243, (92, 92, 92)):
+    time.sleep(0.3)
 pyautogui.moveTo(1638, 243, duration=0.25)
 pyautogui.click()
 # Logon at Point(x=1362, y=15)
-time.sleep(8.5)
+while not pyautogui.pixelMatchesColor(745, 50, (0, 128, 0)):
+    time.sleep(0.3)
 pyautogui.moveTo(1362, 15, duration=0.25)
 pyautogui.click()
-time.sleep(1.5)
 # Input PIN 46267
 pyautogui.write('46267')
-time.sleep(1)
 # Service selector at Point(x=1261, y=164)
 pyautogui.moveTo(1261, 164, duration=0.25)
 pyautogui.click()
-time.sleep(0.5)
 # Service MAT2 at Point(x=1249, y=178)
 pyautogui.moveTo(1249, 178, duration=0.25)
 pyautogui.click()
