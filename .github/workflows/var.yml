@@ -1,3 +1,0 @@
-env:
-  LOGIN_MAIL: ${{ secrets.LOGIN_MAIL }}
-  LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}

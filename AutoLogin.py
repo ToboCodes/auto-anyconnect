@@ -1,8 +1,7 @@
 import pyautogui
 import time
+from login_var import *
 wait = 0.2
-user = 'ccontrerasc@entel.cl'
-auth = 'Gponinstalador@147'
 pin = '46267'
 
 cli = pyautogui.getActiveWindow()
@@ -49,5 +48,5 @@ pyautogui.click()
 # Accept button at Point(x=1321, y=201)
 pyautogui.moveTo(1321, 201, duration=wait)
 pyautogui.click()
-time.sleep(wait)
+# time.sleep(wait)
 pyautogui.click()
